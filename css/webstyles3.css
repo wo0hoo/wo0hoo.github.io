@@ -1,0 +1,448 @@
+/* Color sets
+	Root is a psuedo clas in css that like acts sort as a global style, this is just an easy placeholder
+	for me to use so no need to back and forth with colors, geeksforgeeks lifesaver. uses css variables */
+:root {
+    --primary-color: #0077cc; /* blue titles*/
+    --secondary-color: #f0ad4e; /* orangy/yellowishdb */
+    --accent-color: #5cb85c; /* green*/
+    --text-color: #333333; /* black/gray */
+    --light-text-color: #f8f9fa;
+    --background-color: #ffffff; /*black*/
+    --border-color: #dddddd;
+    --header-footer-bg: #2c3e50; /* darker backgroudn for header and footers fdsa */
+    --nav-link-color: #ecf0f1;
+    --nav-link-hover-color: #f0ad4e;
+    --footer-text-color: #bdc3c7;
+    --font-primary: 'Arial', sans-serif; /* font chocies*/	
+}
+
+/*UNIVERSAL CSS STYLE, GOES TO ALL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary); /*CSS variablse, to take from the root and place. geeksforgeeks ref*/
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 16px; /*main font size*/
+}
+
+#container {
+    width: 90%;
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto;
+    background-color: var(--background-color);
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional subtle shadow for container */
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 0.75em;
+    color: var(--primary-color);
+    line-height: 1.3;
+}
+
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.1em; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%; /*images sized*/
+    height: auto;
+    display: block; /*removes extra space below images*/
+}
+
+ul {
+    list-style: none;
+}
+
+/*Header Style*/
+header {
+    background-color: var(--header-footer-bg);
+    color: var(--light-text-color);
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em; 
+}
+
+.logo-container img {
+    height: 50px; 
+    margin-right: 15px;
+}
+
+.site-name {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--light-text-color);
+}
+
+/* --- Navigation Styles --- */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack nav items on mobile */
+    align-items: center;
+}
+
+.main-nav ul li {
+    margin: 0.5em 0; /* Spacing for mobile nav items */
+}
+
+.main-nav ul li a {
+    color: var(--nav-link-color);
+    padding: 0.8em 1em;
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav ul li a:hover, .main-nav ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+/* dropdown for destination on the header / nav */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495e; /* Slightly different background for dropdown */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown-content a {
+    color: var(--nav-link-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left; 
+}
+
+.dropdown-content a:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* (home page) */
+#adventure {
+    background-color: #f4f4f4; /*background placeholder, its gray*/
+    padding: 4em 2em; 
+    text-align: center;
+    color: var(--text-color); 
+    margin-bottom: 2em;
+}
+
+#adventure .adventureText {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: var(--primary-color); /* Or white if its on dark bg */
+}
+
+#adventure .adventureText {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+/* --- Main Content & Sections --- */
+main {
+    padding: 1em 0;
+}
+
+section {
+    padding: 2em 1em; 
+    margin-bottom: 1.5em;
+}
+
+/* cta=Call to Action Buttons*/
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 0.5em 0.5em 0.5em 0; 
+}
+
+.cta-button:hover {
+    background-color: darken(var(--primary-color), 10%); /*darjebs the backgroudn color*/
+    color: #000000;
+    text-decoration: none;
+}
+
+.cta-button.second {
+    background-color: var(--secondary-color);
+    color: var(--text-color); 
+}
+
+.cta-button.second:hover {
+    background-color: darken(var(--secondary-color), 10%);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*specific section of Homepage*/
+#FTdestinations .destination-grid, #dest-list .destination-grid {
+    display: grid;
+    grid-template-columns: 1fr; /*single column on mobile */
+    gap: 1.5em;
+    margin-top: 1em;
+}
+
+.destination-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1em;
+    text-align: center;
+    background-color: #ebf6f9; /*need to have diff color for this for easier differentiation */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px); /*very design choice, it moves a 
+	little to show that your selecting it */
+    box-shadow: 0 4px 10px;
+}
+
+.destination-card img {
+    border-radius: 6px;
+    margin-bottom: 0.75em;
+}
+
+.destination-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+.destination-card p {
+    font-size: 0.9em;
+    color: #555555;
+    margin-bottom: 0.75em;
+}
+.destination-card a {
+    text-decoration: none;
+    color: inherit; 
+}
+.destination-card a:hover h3 {
+    color: var(--secondary-color);
+}
+
+.destination-card .read-more {
+    display: inline-block;
+    margin-top: 0.5em;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+#services-overview .action-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    margin-top: 1em;
+    align-items: center;
+}
+
+#services-overview figure {
+    text-align: center;
+}
+
+#services-overview figcaption {
+    margin-top: 0.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/*Contct Page Styles*/
+.contact-columns {
+    display: flex;
+    flex-direction: column; /*staksc on mobiel*/
+    gap: 2em;
+}
+
+#contact-form-section {
+    flex: 2; /*more space side by side*/
+}
+
+#contact-details-section {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+#contact-details-section h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3em;
+    font-weight: bold;
+}
+
+/* basically creates the text boxes*/
+.form-group input[type="text"], .form-group input[type="email"], 
+.form-group input[type="tel"], .form-group textarea {
+    width: 100%;
+    padding: 0.8em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+#form-status-message {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+#map-container {
+    margin-top: 1.5em;
+}
+#map-container h3 {
+    margin-bottom: 0.5em;
+}
+
+/* Styles for footer*/
+footer {
+    background-color: var(--header-footer-bg);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 2em 1em;
+    margin-top: 2em;
+    font-size: 0.9em;
+    border-top: 3px solid var(--primary-color);
+}
+
+footer p {
+    margin-bottom: 0.5em;
+}
+
+footer a {
+    color: var(--nav-link-color); /* Use nav link color for footer links too */
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* Show and hid ebased on screen sizes */
+.mobile {
+    display: block; 
+}
+.desktop {
+    display: none; 
+}
+
+/* Small devices (tablets, 600px)s */
+@media only screen and (min-width: 600px) {
+    h1 { 
+		font-size: 2.5em; 
+	}
+    h2 { 
+		font-size: 2em; 
+	}
+
+    .mobile {
+        display: none; /* hides mobile elements hidden */
+    }
+    .desktop {
+        display: block; 
+    }
+
+    #FTdestinations .destination-grid, #dest-list .destination-grid {
+        grid-template-columns: repeat(2, 1fr); /* showsTwo columns for tablets */
+    }
+
+    #services-overview .action-links {
+        flex-direction: row; /*side by side on larger screens */
+        justify-content: space-around;
+    }
+}
+
+/* Medium devices (laptops, 768px) */
+@media (min-width: 768px) {
+    body {
+        font-size: 17px; /*slightly larger font for easier read*/
+    }
+
+    header {
+        flex-direction: row; /*Logo and Nav next to each other */
+        justify-content: space-between;
+        padding: 1em 2%; /*adjust padding for #container if width is a percentage */
+    }
+
+    .logo-container {
+        margin-bottom: 0;
+    }
+
+    .main-nav ul {
+        flex-direction: row; /*horizontal nav items */
+    }
+
+    .main-nav ul li {
+        margin: 0 0.5em; 
+    }
+
+    .contact-columns {
+        flex-direction: row; /*fomrat changes to be sidebyside */
+    }
+}
+
+/* Large devices (desktops, 992px maybe evne tvs) */
+@media (min-width: 992px) {
+    #FTdestinations .destination-grid, #dest-list .destination-grid {
+        grid-template-columns: repeat(3, 1fr); /* showsThree columns for desktops */
+    }
+    .main-nav ul li {
+        margin: 0 1em
+    }
+}
+
