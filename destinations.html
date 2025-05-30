@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="css/webstyles3.css">
+    <title>Destinations - Travel4Ever</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+</head>
+
+<body>
+    <div id="container">
+	<header>
+		<div class="logo-container">
+			<a href="index.html"><img src="images/plane_swish.png" alt="Travel4Ever Logo"></a>
+			<span class="site-name">Travel4Ever</span>
+		</div>
+
+		<nav class="main-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li class="dropdown">
+					<a href="destinations.html" class ="active">Destinations</a>
+					<div class="dropdown-content">
+						<a href="locationA.html">Indonesia</a>
+						<a href="locationB.html">Singapore</a>
+					</div>
+				</li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section>
+			<h2>The World Is Vast And Always Expanding</h2>
+			<img src ="images/earth_in_space.jpg" alt="Space" >
+			<p></p>
+			<h1>Explore Our Destinations</h1>
+			<p>Discover a world of adventure. Browse through our curated list of amazing 
+			places to visit.</p>
+		</section>
+
+		<section id="dest-list">
+			<h2>All Destinations</h2>
+			<div class="destination-grid">
+				<article class="destination-card">
+					<a href="locationA.html">
+						<h3>Indonesia</h3>
+						<p>Explore Indonesia, a sprawling archipelago nation famous for its 
+						breathtaking volcanic landscapes, terraced rice paddies, 
+						and world-class surfing beaches. Discover ancient temples,
+						vibrant cultural festivals, and an incredible array of biodiversity 
+						from orangutans to diverse marine ecosystems.</p>
+						<span class="read-more">Learn More &rarr;</span></a> <!-- &rarr creates the arrow -->
+						
+					<p><img src ="images/IDR_flag.png" alt = "Indonesian Flag"></p>
+				</article>
+
+				<article class="destination-card">
+					<a href="locationB.html">
+						<h3>Singapore</h3>
+						<p>Experience Singapore, a modern marvel celebrated for its 
+						stunning futuristic skyline, iconic Gardens by the Bay, and a 
+						truly global culinary scene. This vibrant city-state seamlessly 
+						blends diverse cultures, offering unparalleled shopping, 
+						lush urban parks, and efficient public transport for easy exploration.</p>
+						<span class="read-more">Learn More &rarr;</span></a>
+						
+					<p><img src ="images/SG_flag.png" alt = "Singaporean Flag"></p>
+				</article>
+
+				<article class="destination-card placeholder">
+						<h3>Japan</h3>
+						<p>Immerse yourself in Japan, where ancient traditions gracefully 
+						coexist with cutting-edge technology. Discover serene Zen gardens 
+						and historic temples, marvel at the neon-lit streets of Tokyo, and 
+						savor exquisite regional cuisine from sushi to ramen. 
+						Experience the beauty of cherry blossoms in spring or the vibrant 
+						fall foliage.</p>
+						<span class="read-more"></span>
+						
+					<p><img src ="images/JP_flag.png" alt = "Japanese Flag"></p>
+				</article>
+
+				<article class="destination-card placeholder">
+						<h3>United States of America</h3>
+						<p>Journey across the United States, a land of incredible geographical 
+						and cultural diversity. From the bustling metropolises of New York
+						and Los Angeles to the majestic natural wonders of the Grand Canyon
+						and Yellowstone, experience iconic landmarks, rich history, and a 
+						wide spectrum of regional cuisines and traditions.</p>
+						<span class="read-more"></span>
+							
+					<p><img src ="images/USA_flag.png" alt = "American Flag"></p>
+				</article>
+				
+				<article class="destination-card placeholder">
+						<h3>Hong Kong</h3>
+						<p>Explore the vibrant tapestry of Hong Kong! From the dazzling neon glow of its skyscrapers to the tranquil serenity of its ancient temples and lush hiking trails, discover an unforgettable adventure where East meets West in a culinary paradise. 
+						Your ultimate guide to experiencing the best of Hong Kong awaits!</p>
+						<span class="read-more"></span>
+							
+					<p><img src ="images/HK_flag.png" alt = "Hong Kong Flag"></p>
+				</article>
+				
+				<article class="destination-card placeholder">
+					<p> &#9888; Card Currently Under Development.<br>
+					A New Adventure Awaits!</p>
+				</article>
+				
+				
+			</div>
+		</section>
+
+		<section id="destination-suggestion">
+			<h2>Can't Find What You're Looking For?</h2>
+			<p>We are actively expanding our list of destinations. If you have a place in mind or would like a personalized recommendation, feel free to contact us!</p>
+			<a href="contact.html" class="cta-button">Contact Us Today</a>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; Copyright <span id="current-year"></span> Travel4Ever. All Rights Reserved.</p>
+		<p><a href="mailto:info@travel4ever.com">info@travel4ever.com</a></p>
+	</footer>
+    </div>
+	
+	<script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+		/* very small amount of JS, but this is to get the year for the copyright */
+    </script>
+
+</body>
+</html>

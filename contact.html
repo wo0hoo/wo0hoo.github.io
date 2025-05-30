@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/webstyles3.css">
+    <title>Contact Us - Travel4Ever</title>
+</head>
+
+<body>
+    <div id="container">
+	<header>
+		<div class="logo-container">
+			<a href="index.html"><img src="images/plane_swish.png" alt="Travel4Ever Logo"></a>
+			<span class="site-name">Travel4Ever</span>
+		</div>
+
+		<nav class="main-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li class="dropdown">
+					<a href="destinations.html">Destinations</a>
+					<div class="dropdown-content">
+						<a href="locationA.html">Indonesia</a>
+						<a href="locationB.html">Singapore</a>
+					</div>
+				</li>
+				<li><a href="contact.html" class="active">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<section id="contact-intro">
+			<h1>Get in Touch</h1>
+			<p>We'd love to hear from you! Whether you have questions, need travel advice, 
+			or want to plan your next trip, our team is here to help.</p>
+		</section>
+
+		<div class="contact-columns">
+			<section id="contact-form-section">
+				<h2>Send Us a Message</h2>
+				
+				<!-- Below are usage of forms -->
+				<form action="submit_form.php" method="POST" id="contactForm">
+					<div class="form-group">
+						<label for="name">Name:</label>
+						<input type="text" id="name" name="name"> <!--text box feature, actually uses realistic text -->
+					</div>
+					<div class="form-group">
+						<label for="email">Email Address:</label>
+						<input type="email" id="email" name="email" required> <!--automatically gives warning message if not proper email-->
+					</div>
+					<div class="form-group">
+						<label for="phone">Phone Number (Optional):</label>
+						<input type="tel" id="phone" name="phone">
+					</div>
+					<div class="form-group">
+						<label for="message">Your Message:</label>
+						<textarea id="message" name="message" rows="6" required></textarea>
+					</div>
+					<button type="submit" class="cta-button">Send Message</button>
+				</form>
+				<div id="form-status-message"></div>
+			</section>
+
+			<aside id="contact-details-section">
+				<h2>Ready to get started? Contact us today.</h2>
+				<p>Our Headquarters:<br>
+				Los Angeles, CA 90007<br>
+				1 Salisado Drive</p>
+				
+				<h2>Contact Information</h2>
+				<p><b>Phone:</b> <a href="tel:+1800travel4ever">1-800-travel4ever</a></p>
+				<p><b>Email:</b> <a href="mailto:info@travel4ever.com">info@travel4ever.com</a></p>
+				<h3>Operational Hours:</h3>
+				<p>
+					Monday: CLOSED<br>
+					Tuesday - Friday: 9:00 AM - 6:00 PM PST<br>
+					Saturday - Sunday: 8:00 AM - 6:00 PM PST
+				</p>
+
+				</aside>
+		</div> 
+		</main>
+
+	<footer>
+		<p>&copy; Copyright <span id="current-year"></span> Travel4Ever. All Rights Reserved.</p>
+		<p><a href="mailto:info@travel4ever.com">info@travel4ever.com</a></p>
+	</footer>
+    </div>
+	
+	<script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+		/*very small amount of JS, but this is to get the year for the copyright */
+    </script>
+
+   
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <link rel="stylesheet" href="css/webstyles3.css">
+    <title>Home - Travel4Ever</title>
+</head>
+
+<body>
+    <div id="container">
+	
+    <header>
+	<div class="logo-container">
+		<a href="index.html"><img src="images/plane_swish.png" alt="Travel4Ever Logo"></a>
+		<span class="site-name">Travel4Ever</span>
+		
+	</div>
+		<nav class="main-nav">
+		<ul>
+			<li><a href="index.html" class="active">Home</a></li>
+			<li><a href="about.html">About Us</a></li>
+			<li class="dropdown"> <!-- Dropdown for subsection pages-->
+				<a href="destinations.html">Destinations</a>
+				<div class="dropdown-content">
+					<a href="locationA.html">Indonesia</a>
+					<a href="locationB.html">Singapore</a>
+				</div>
+			</li>
+				<li><a href="contact.html">Contact Us</a></li>
+		</ul>
+		</nav>
+	</header>
+	
+	<section id="adventure" class="desktop">
+		<div class="adventureText">
+			<h2>Discover Your Next Adventure</h2>
+			<p>Unforgettable journeys start with Travel4Ever.</p>
+			<a href="destinations.html" class="cta-button">Explore Destinations</a>
+		</div>
+	</section>
+	<main>
+		<section id="welcome">
+			<h1>Welcome to Travel4Ever!</h1>
+			<p>Hello Travellers! Our goal is to provide you with inspiring information about incredible destinations and unforgettable experiences.</p>
+			<p>If you've ever struggled with trying to figure out where to go for your next vacation, then this is the place for you!</p>
+			<p>We offer specialized destination guides and connect you with expert travel agent services to help you plan your perfect trip. Let's make your travel dreams a reality!</p>
+		</section>
+
+		<section id="FTdestinations" class="desktop">
+			<h2>Featured Destinations</h2>
+			<div class="destination-grid">
+				<article class="destination-card">
+					<a href="locationA.html">
+						<h3>Indonesia</h3>
+						<p>An archipelogo made up of thousands of islands. Explore Indonesia's
+						diverse landscapes and culture.</p>
+						<span class="read-more">Learn More &rarr;</span></a>
+						
+					<p><img src ="images/IDR_flag.png" alt = "Indonesian Flag"></p>
+				</article>
+				<article class="destination-card">
+					<a href="locationB.html">
+						<h3>Singapore</h3>
+						<p>A small city-state with cleanly streets and iconic attractions. Explore
+						the rich city-scape of Singapore</p>
+						<span class="read-more">Learn More &rarr;</span></a>
+						
+					<p><img src ="images/SG_flag.png" alt = "Singaporean Flag"></p>
+				</article>
+			</div>
+			<div class="text-center">
+				<a href="destinations.html" class="cta-button second">View All Destinations</a>
+			</div>
+		</section>
+		<section id="services-overview" class="desktop">
+			<h2>How We Can Help</h2>
+			<p>Start Browse our curated destinations, or contact us today for personalized suggestions and travel planning assistance.</p>
+			<div class="action-links">
+				<figure>
+					<a href="destinations.html">
+						<img src="images/shibuya.jpg" alt="Explore Destinations">
+						<figcaption>Explore Our Destinations</figcaption>
+					</a>
+				</figure>
+				<figure>
+					<a href="contact.html">
+						<img src="images/new_york_city.jpg" alt="Contact Us">
+						<figcaption>Plan Your Trip With Us</figcaption>
+					</a>
+				</figure>
+			</div>
+		</section>
+
+		<section id="contact-info-mobile" class="mobile">
+			<h3>Plan Your Next Trip With Us Today!</h3>
+			<p><a href="tel:+10000000000">Call Us: (000) 000-0000</a></p>
+			<h4>Operational Hours:</h4>
+				<p>
+					Monday: CLOSED<br>
+					Tuesday - Friday: 9:00 AM - 6:00 PM PST<br>
+					Saturday - Sunday: 8:00 AM - 6:00 PM PST
+				</p>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; Copyright <span id="current-year"></span> Travel4Ever. All Rights Reserved.</p>
+		<p><a href="mailto:info@travel4ever.com">info@travel4ever.com</a></p>
+	</footer>
+	</div> 
+	
+	<!-- js --><script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+		/* very small amount of JS, but this is to get the year for the copyright */
+    </script>
+	
+	</body>
+</html>

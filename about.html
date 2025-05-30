@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 ">
+    <link rel="stylesheet" href="css/webstyles3.css">
+    <title>About Us - Travel4Ever</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/plane_swish.png" alt="Travel4Ever Logo">
+                </a>
+                <span class="site-name">Travel4Ever</span>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li class="dropdown">
+                        <a href="destinations.html">Destinations</a>
+                        <div class="dropdown-content">
+                            <a href="locationA.html">Indonesia</a>
+							<a href="locationB.html">Singapore</a>
+						</div>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="about-intro">
+				<h1>Slogan</h1>
+				<h4>Travel Here<br>
+				Travel There <br>
+				Travel Everywhere</h4>
+				<br>
+			
+                <h1>About Travel4Ever</h1>
+                <p>Welcome to Travel4Ever, your trusted partner in crafting unforgettable travel experiences.
+				We believe that travel is more than just visiting new places; 
+				it's about creating lasting memories, broadening horizons, 
+				and discovering the world's wonders.</p>
+                </section>
+
+            <section id="our-mission">
+                <h2>Our Mission</h2>
+                <p>Our mission is to simplify the travel planning process and inspire you to explore. 
+				We strive to provide comprehensive destination guides, practical travel tips, 
+				and connect you with reliable services to ensure your journey is smooth and enjoyable 
+				from start to finish.</p>
+                </section>
+
+            <section id="our-story">
+                <h2>Our Story</h2>
+                <p>Travel4Ever was founded by a small group of very passionate travelers 
+				who wanted to share their experiences and insights for locations all around the world. 
+				Frustrated by the complexities of planning trips, they decided to create a platform 
+				that offers everything a traveler needs in one place.</p>
+            </section>
+
+            <section id="cta-about">
+                <h2>Ready to Plan Your Next Adventure?</h2>
+                <p>Explore our destinations or get in touch with us for personalized travel advice.</p>
+                <a href="destinations.html" class="cta-button">See Our Destinations</a>
+                <a href="contact.html" class="cta-button second">Contact Us</a>
+            </section>
+		</main>
+
+        <footer>
+            <p>&copy; Copyright <span id="current-year"></span> Travel4Ever. All Rights Reserved.</p>
+            <p><a href="mailto:info@travel4ever.com">info@travel4ever.com</a></p>
+        </footer>
+    </div>
+
+    <!-- js --> <script> 
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+		/*very small amount of JS, but this is to get the year for the copyright */
+    </script>
+</body>
+</html>
